@@ -1,6 +1,5 @@
 # TeamProject_Group4
 
-## Here is our Project Repository - Soona
 
 ### TOPIC: COVID 19 Machine Learning Analysis
 In this team project, we will analyze the trend of COVID-19 dataset using machine learning technics. 
