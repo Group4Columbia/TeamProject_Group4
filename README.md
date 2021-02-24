@@ -10,7 +10,8 @@ In this team project, we will analyze the trend of COVID-19 dataset using machin
 ### Team project Environment Setup
 - Team Github – https://github.com/Group4Columbia/TeamProject_Group4
 - Main 
-- Branch (per each) ![team members brach setup](https://github.com/Group4Columbia/TeamProject_Group4/blob/main/Capture_branch.JPG)
+- Branch (per each) 
+- ![team members brach setup](https://github.com/Group4Columbia/TeamProject_Group4/blob/main/Capture_branch.JPG)
 
 ### Objectives
 1.	Team members present a provisional machine learning model that stands in for the final machine learning model and accomplishes the following: 
