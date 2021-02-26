@@ -3,12 +3,11 @@
 
 ### TOPIC: COVID 19 Machine Learning Analysis
 In this team project, we will analyze the trend of COVID-19 dataset using machine learning technics. 
-1.	Find out the correlation between # of test and the COVID-19 positive cases.
-2.	Find out the correlation between # of COVID-19 positive cases and # of death
-3.	Find out the correlation between # of vaccination and # of test by county / state
-4.	Find out where the most vaccinations and test by geographic location 
-5.  Find out the effectiveness of lockdowns and travel restrictions
-6.  Find out the relationship between days of school closures and cases in the community
+1.	Find out the correlation between # of test and the COVID-19 positive cases. *More testing does not lead to more cases
+2.	Find out the correlation between # of COVID-19 positive cases and # of death *More positive cases does not lead to more death
+3.	Find out the correlation between # of vaccination and # of cases by county / state *More vaccination does not lead to less cases
+4.	Find out if the most populated areas have the greatest amount of vaccinations  *Vaccine rollout is not related to population
+5.  Find out the relationship between days of school closures and cases in the community *School closures does not decrease community cases
 
 ### Team project Environment Setup
 - Team Github – https://github.com/Group4Columbia/TeamProject_Group4
