@@ -4,8 +4,10 @@
 ### TOPIC: COVID 19 Machine Learning Analysis
 In this team project, we will analyze the trend of COVID-19 dataset using machine learning technics. 
 1.	Find out the correlation between # of test and the COVID-19 positive cases.
-2.	Find out the correlation between # of COVID-19 positive cases and # of death.
-3.	Find out the correlation between # of vaccination and # of cases.
+2.	Find out the correlation between # of COVID-19 positive cases and # of death
+3.	Find out the correlation between # of vaccination and # of test by county / state
+4.	Find out where the most vaccinations and test by location 
+
 
 ### Team project Environment Setup
 - Team Github – https://github.com/Group4Columbia/TeamProject_Group4
@@ -27,7 +29,8 @@ b.	✓ Draft machine learning module is connected to the provisional database
 2.	https://covidtracking.com/
 3.	https://covid.cdc.gov/covid-data-tracker/#vaccinations
 4.	https://www.theguardian.com/us-news/2021/feb/18/us-vaccine-distribution-tracker-by-state
-5.	https://covid.cdc.gov/covid-data-tracker/#vaccination-demographic
+5.	
+6.	https://covid.cdc.gov/covid-data-tracker/#vaccination-demographic
 
 ### Team Project Development Planning: 
 1.	Both World and US Map - COVID-19 Map - Johns Hopkins Coronavirus Resource Center  - John Hopkins Data – on the Map
