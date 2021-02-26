@@ -3,8 +3,8 @@
 
 ### TOPIC: COVID 19 Machine Learning Analysis
 In this team project, we will analyze the trend of COVID-19 dataset using machine learning technics. 
-1.	Find out the correlation between # of test and the COVIND-19 positive cases.
-2.	Find out the correlation between # of COVIND-19 positive cases and # of death.
+1.	Find out the correlation between # of test and the COVID-19 positive cases.
+2.	Find out the correlation between # of COVID-19 positive cases and # of death.
 3.	Find out the correlation between # of vaccination and # of cases.
 
 ### Team project Environment Setup
