@@ -2,7 +2,7 @@
 
 
 ### TOPIC: COVID 19 Machine Learning Analysis
-In this team project, we will analyze the trend of COVID-19 dataset using machine learning technics. 
+In this team project, we will analyze the data on COVID-19 for 2020 to predict the COVID-19 impact in 2021 and analyze current trends of COVID-19 dataset using machine learning tactics. 
 1.	Find out the correlation between # of test and the COVID-19 positive cases. 
     - More testing does not lead to more cases
 2.	Find out the correlation between # of COVID-19 positive cases and # of death 
