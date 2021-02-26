@@ -8,7 +8,7 @@ In this team project, we will analyze the trend of COVID-19 dataset using machin
 3.	Find out the correlation between # of vaccination and # of test by county / state
 4.	Find out where the most vaccinations and test by geographic location 
 5.  Find out the effectiveness of lockdowns and travel restrictions
-6.  Find out the relationship between school closures and cases in children
+6.  Find out the relationship between days of school closures and cases in the community
 
 ### Team project Environment Setup
 - Team Github – https://github.com/Group4Columbia/TeamProject_Group4
