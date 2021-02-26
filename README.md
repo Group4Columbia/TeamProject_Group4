@@ -7,7 +7,7 @@ In this team project, we will analyze the trend of COVID-19 dataset using machin
 2.	Find out the correlation between # of COVID-19 positive cases and # of death
 3.	Find out the correlation between # of vaccination and # of test by county / state
 4.	Find out where the most vaccinations and test by geographic location 
-
+5.  Find out the effectiveness of lockdowns and travel restrictions
 
 ### Team project Environment Setup
 - Team Github – https://github.com/Group4Columbia/TeamProject_Group4
