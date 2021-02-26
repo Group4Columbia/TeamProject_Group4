@@ -22,11 +22,16 @@ In this team project, we will analyze the data on COVID-19 for 2020 to predict t
 
 ### Objectives
 1.	Team members present a provisional machine learning model that stands in for the final machine learning model and accomplishes the following: 
-a.	✓ Takes in data in from the provisional database 
-b.	✓ Outputs label(s) for input data
+
+	a.	✓ Takes in data in from the provisional database 
+
+	b.	✓ Outputs label(s) for input data
+
 2.	Data - Team members present a provisional database that stands in for the final database and accomplishes the following: 
-a.	✓ Sample data that mimics the expected final database structure or schema 
-b.	✓ Draft machine learning module is connected to the provisional database
+
+	a.	✓ Sample data that mimics the expected final database structure or schema 
+
+	b.	✓ Draft machine learning module is connected to the provisional database
 
 
 ### Data sources: 
@@ -34,12 +39,12 @@ b.	✓ Draft machine learning module is connected to the provisional database
 2.	https://covidtracking.com/
 3.	https://covid.cdc.gov/covid-data-tracker/#vaccinations
 4.	https://www.theguardian.com/us-news/2021/feb/18/us-vaccine-distribution-tracker-by-state
-5.	
+5.	https://data.humdata.org/event/
 6.	https://covid.cdc.gov/covid-data-tracker/#vaccination-demographic
 
 ### Team Project Development Planning: 
 1.	Both World and US Map - COVID-19 Map - Johns Hopkins Coronavirus Resource Center  - John Hopkins Data – on the Map
 2.	Trend Analysis –Python technology
-3.	Prediction Analysis –Machine Learning (Neural Networks and Deep Learning Models) 
-4.	Final Report for tea- Tableau 
+3.	Prediction Analysis: Machine Learning (Neural Networks and Deep Learning Models) 
+4.	Final Report provide visual using Tableau 
 
