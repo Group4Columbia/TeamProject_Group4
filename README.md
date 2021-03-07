@@ -9,10 +9,10 @@ In this team project, we will analyze the data on COVID-19 for 2020 to predict t
 	  - More positive cases does not lead to more death
 3.	Find out the correlation between # of vaccination and # of cases by county / state 
 	  - More vaccination does not lead to less cases
-4.	Find out if the most populated areas have the greatest amount of vaccinations  
-	  - Vaccine rollout is not related to population
-5.  Find out the relationship between days of school closures and cases in the country / region
-    - School closures does not decrease community cases
+4.	Find out how the Human Devlopment Index effects the vaccination rollout across different countries that we are using for analysis. 
+	  - Vaccine rollout is effected by the Human Development Index, and other socioeconomic factors such as politcs. 
+5.  	Find out the relationship between days of school closures and cases in the country / region
+    		- School closures does not decrease community cases
 
 ### Team project Environment Setup
 - Team Github – https://github.com/Group4Columbia/TeamProject_Group4
