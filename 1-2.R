@@ -10,3 +10,8 @@ summary(fit2) ##                       Ignore Blanks
 cor(d$new_deaths, d$new_cases, use = "complete.obs") ##correlation between new deaths and new cases is .92
 ##new cases, new cases smoothed and new cases smoothed per million are all statistically significant
 
+fit3 = lm(d$total_vaccinations ~ d$new_tests + d$new_cases)
+summary(fit3)
+cor(d$total_vaccinations, d$new_cases, use = "complete.obs")
+
+plot(d$new_deaths, d$new_cases)
