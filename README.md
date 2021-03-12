@@ -41,6 +41,7 @@ In this team project, we will analyze the data on COVID-19 for 2020 to predict t
 4.	https://www.theguardian.com/us-news/2021/feb/18/us-vaccine-distribution-tracker-by-state
 5.	https://data.humdata.org/event/
 6.	https://covid.cdc.gov/covid-data-tracker/#vaccination-demographic
+7.	https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-codebook.csv
 
 ### Team Project Development Planning: 
 1.	Both World and US Map - COVID-19 Map - Johns Hopkins Coronavirus Resource Center  - John Hopkins Data – on the Map
