@@ -6,7 +6,7 @@ cor(d$new_cases, d$new_tests, use = "complete.obs")  ##correlation between new c
 options(scipen=999) ##remove scientific notation
 plot(d$new_cases~ d$new_tests)
 plot(d$new_cases, d$new_tests, main='Regression Between New Cases and New Tests' ,xlab='Cases',ylab='Tests',xlim=c(0,300000),ylim=c(0,2500000), pch=20, col= 'blue')
-abline(lm(new_tests ~ new_cases, data= d), col = 'black')
+abline(lm(new_tests ~ new_cases, data= d), col = 'red' , lwd = 3 )
 
 
 fit2= lm(d$new_deaths ~ d$new_cases + d$new_cases_smoothed + d$new_cases_smoothed_per_million)
