@@ -1,0 +1,2284 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20204.21.0217.1203                               -->
+<workbook source-build='2020.4.2 (20204.21.0217.1203)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <_.fcp.SetMembershipControl.true...SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Comparison 2' datatype='string' name='[Comparison 1 (copy)_92042338357755904]' param-domain-type='list' role='measure' type='nominal' value='&quot;New Deaths&quot;'>
+        <calculation class='tableau' formula='&quot;New Deaths&quot;' />
+        <members>
+          <member value='&quot;Daily Vaccination&quot;' />
+          <member value='&quot;New Cases&quot;' />
+          <member value='&quot;New Deaths&quot;' />
+          <member value='&quot;Human Development Index&quot;' />
+          <member value='&quot;Total Cases&quot;' />
+        </members>
+      </column>
+      <column caption='Comparison 1' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Human Development Index&quot;'>
+        <calculation class='tableau' formula='&quot;Human Development Index&quot;' />
+        <members>
+          <member value='&quot;Daily Vaccination&quot;' />
+          <member value='&quot;New Cases&quot;' />
+          <member value='&quot;New Deaths&quot;' />
+          <member value='&quot;Human Development Index&quot;' />
+          <member value='&quot;Total Cases&quot;' />
+        </members>
+      </column>
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[Parameter 1]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;1&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Daily Vaccination&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+    </datasource>
+    <datasource caption='covid_map_data' inline='true' name='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='covid_map_data' name='textscan.112j9f90672uh418fcz6316mu2m7'>
+            <connection class='textscan' directory='C:/Users/osbor/Box/2020-Class/Data_analytics/ColumbiaNotes/Class/Module20-Group_Project/Project Resources' filename='covid_map_data.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.112j9f90672uh418fcz6316mu2m7' name='covid_map_data.csv' table='[covid_map_data#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='location' ordinal='0' />
+            <column datatype='string' name='iso_code' ordinal='1' />
+            <column datatype='date' name='date' ordinal='2' />
+            <column datatype='integer' name='total_vaccinations_x' ordinal='3' />
+            <column datatype='real' name='people_vaccinated_x' ordinal='4' />
+            <column datatype='real' name='people_fully_vaccinated' ordinal='5' />
+            <column datatype='real' name='daily_vaccinations_raw' ordinal='6' />
+            <column datatype='integer' name='daily_vaccinations' ordinal='7' />
+            <column datatype='real' name='total_vaccinations_per_hundred' ordinal='8' />
+            <column datatype='real' name='people_vaccinated_per_hundred' ordinal='9' />
+            <column datatype='real' name='people_fully_vaccinated_per_hundred' ordinal='10' />
+            <column datatype='real' name='daily_vaccinations_per_million' ordinal='11' />
+            <column datatype='string' name='Country' ordinal='12' />
+            <column datatype='string' name='Status' ordinal='13' />
+            <column datatype='string' name='Note' ordinal='14' />
+            <column datatype='real' name='total_vaccinations_y' ordinal='15' />
+            <column datatype='real' name='people_vaccinated_y' ordinal='16' />
+            <column datatype='real' name='total_deaths' ordinal='17' />
+            <column datatype='real' name='total_cases' ordinal='18' />
+            <column datatype='real' name='new_cases' ordinal='19' />
+            <column datatype='real' name='new_deaths' ordinal='20' />
+            <column datatype='real' name='population_density' ordinal='21' />
+            <column datatype='real' name='gdp_per_capita' ordinal='22' />
+            <column datatype='real' name='handwashing_facilities' ordinal='23' />
+            <column datatype='real' name='diabetes_prevalence' ordinal='24' />
+            <column datatype='real' name='hospital_beds_per_thousand' ordinal='25' />
+            <column datatype='real' name='life_expectancy' ordinal='26' />
+            <column datatype='real' name='human_development_index' ordinal='27' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.112j9f90672uh418fcz6316mu2m7' name='covid_map_data.csv' table='[covid_map_data#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='location' ordinal='0' />
+              <column datatype='string' name='iso_code' ordinal='1' />
+              <column datatype='date' name='date' ordinal='2' />
+              <column datatype='integer' name='total_vaccinations_x' ordinal='3' />
+              <column datatype='real' name='people_vaccinated_x' ordinal='4' />
+              <column datatype='real' name='people_fully_vaccinated' ordinal='5' />
+              <column datatype='real' name='daily_vaccinations_raw' ordinal='6' />
+              <column datatype='integer' name='daily_vaccinations' ordinal='7' />
+              <column datatype='real' name='total_vaccinations_per_hundred' ordinal='8' />
+              <column datatype='real' name='people_vaccinated_per_hundred' ordinal='9' />
+              <column datatype='real' name='people_fully_vaccinated_per_hundred' ordinal='10' />
+              <column datatype='real' name='daily_vaccinations_per_million' ordinal='11' />
+              <column datatype='string' name='Country' ordinal='12' />
+              <column datatype='string' name='Status' ordinal='13' />
+              <column datatype='string' name='Note' ordinal='14' />
+              <column datatype='real' name='total_vaccinations_y' ordinal='15' />
+              <column datatype='real' name='people_vaccinated_y' ordinal='16' />
+              <column datatype='real' name='total_deaths' ordinal='17' />
+              <column datatype='real' name='total_cases' ordinal='18' />
+              <column datatype='real' name='new_cases' ordinal='19' />
+              <column datatype='real' name='new_deaths' ordinal='20' />
+              <column datatype='real' name='population_density' ordinal='21' />
+              <column datatype='real' name='gdp_per_capita' ordinal='22' />
+              <column datatype='real' name='handwashing_facilities' ordinal='23' />
+              <column datatype='real' name='diabetes_prevalence' ordinal='24' />
+              <column datatype='real' name='hospital_beds_per_thousand' ordinal='25' />
+              <column datatype='real' name='life_expectancy' ordinal='26' />
+              <column datatype='real' name='human_development_index' ordinal='27' />
+            </columns>
+          </relation>
+          <relation connection='textscan.112j9f90672uh418fcz6316mu2m7' name='covid_youth.csv' table='[covid_youth#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='string' name='iso_code' ordinal='0' />
+              <column datatype='date' name='date' ordinal='1' />
+              <column datatype='string' name='total_vaccinations' ordinal='2' />
+              <column datatype='string' name='people_vaccinated' ordinal='3' />
+              <column datatype='real' name='total_deaths' ordinal='4' />
+              <column datatype='real' name='total_cases' ordinal='5' />
+              <column datatype='real' name='new_cases' ordinal='6' />
+              <column datatype='real' name='new_deaths' ordinal='7' />
+              <column datatype='real' name='population_density' ordinal='8' />
+              <column datatype='real' name='gdp_per_capita' ordinal='9' />
+              <column datatype='real' name='handwashing_facilities' ordinal='10' />
+              <column datatype='real' name='diabetes_prevalence' ordinal='11' />
+              <column datatype='real' name='hospital_beds_per_thousand' ordinal='12' />
+              <column datatype='real' name='life_expectancy' ordinal='13' />
+              <column datatype='real' name='human_development_index' ordinal='14' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Country]' value='[covid_map_data.csv].[Country]' />
+          <map key='[Note]' value='[covid_map_data.csv].[Note]' />
+          <map key='[Status]' value='[covid_map_data.csv].[Status]' />
+          <map key='[daily_vaccinations]' value='[covid_map_data.csv].[daily_vaccinations]' />
+          <map key='[daily_vaccinations_per_million]' value='[covid_map_data.csv].[daily_vaccinations_per_million]' />
+          <map key='[daily_vaccinations_raw]' value='[covid_map_data.csv].[daily_vaccinations_raw]' />
+          <map key='[date (covid_youth.csv)]' value='[covid_youth.csv].[date]' />
+          <map key='[date]' value='[covid_map_data.csv].[date]' />
+          <map key='[diabetes_prevalence (covid_youth.csv)]' value='[covid_youth.csv].[diabetes_prevalence]' />
+          <map key='[diabetes_prevalence]' value='[covid_map_data.csv].[diabetes_prevalence]' />
+          <map key='[gdp_per_capita (covid_youth.csv)]' value='[covid_youth.csv].[gdp_per_capita]' />
+          <map key='[gdp_per_capita]' value='[covid_map_data.csv].[gdp_per_capita]' />
+          <map key='[handwashing_facilities (covid_youth.csv)]' value='[covid_youth.csv].[handwashing_facilities]' />
+          <map key='[handwashing_facilities]' value='[covid_map_data.csv].[handwashing_facilities]' />
+          <map key='[hospital_beds_per_thousand (covid_youth.csv)]' value='[covid_youth.csv].[hospital_beds_per_thousand]' />
+          <map key='[hospital_beds_per_thousand]' value='[covid_map_data.csv].[hospital_beds_per_thousand]' />
+          <map key='[human_development_index (covid_youth.csv)]' value='[covid_youth.csv].[human_development_index]' />
+          <map key='[human_development_index]' value='[covid_map_data.csv].[human_development_index]' />
+          <map key='[iso_code (covid_youth.csv)]' value='[covid_youth.csv].[iso_code]' />
+          <map key='[iso_code]' value='[covid_map_data.csv].[iso_code]' />
+          <map key='[life_expectancy (covid_youth.csv)]' value='[covid_youth.csv].[life_expectancy]' />
+          <map key='[life_expectancy]' value='[covid_map_data.csv].[life_expectancy]' />
+          <map key='[location]' value='[covid_map_data.csv].[location]' />
+          <map key='[new_cases (covid_youth.csv)]' value='[covid_youth.csv].[new_cases]' />
+          <map key='[new_cases]' value='[covid_map_data.csv].[new_cases]' />
+          <map key='[new_deaths (covid_youth.csv)]' value='[covid_youth.csv].[new_deaths]' />
+          <map key='[new_deaths]' value='[covid_map_data.csv].[new_deaths]' />
+          <map key='[people_fully_vaccinated]' value='[covid_map_data.csv].[people_fully_vaccinated]' />
+          <map key='[people_fully_vaccinated_per_hundred]' value='[covid_map_data.csv].[people_fully_vaccinated_per_hundred]' />
+          <map key='[people_vaccinated]' value='[covid_youth.csv].[people_vaccinated]' />
+          <map key='[people_vaccinated_per_hundred]' value='[covid_map_data.csv].[people_vaccinated_per_hundred]' />
+          <map key='[people_vaccinated_x]' value='[covid_map_data.csv].[people_vaccinated_x]' />
+          <map key='[people_vaccinated_y]' value='[covid_map_data.csv].[people_vaccinated_y]' />
+          <map key='[population_density (covid_youth.csv)]' value='[covid_youth.csv].[population_density]' />
+          <map key='[population_density]' value='[covid_map_data.csv].[population_density]' />
+          <map key='[total_cases (covid_youth.csv)]' value='[covid_youth.csv].[total_cases]' />
+          <map key='[total_cases]' value='[covid_map_data.csv].[total_cases]' />
+          <map key='[total_deaths (covid_youth.csv)]' value='[covid_youth.csv].[total_deaths]' />
+          <map key='[total_deaths]' value='[covid_map_data.csv].[total_deaths]' />
+          <map key='[total_vaccinations]' value='[covid_youth.csv].[total_vaccinations]' />
+          <map key='[total_vaccinations_per_hundred]' value='[covid_map_data.csv].[total_vaccinations_per_hundred]' />
+          <map key='[total_vaccinations_x]' value='[covid_map_data.csv].[total_vaccinations_x]' />
+          <map key='[total_vaccinations_y]' value='[covid_map_data.csv].[total_vaccinations_y]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[location]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>location</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>112</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>iso_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[iso_code]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>iso_code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>112</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_vaccinations_x</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_vaccinations_x]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>total_vaccinations_x</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_vaccinated_x</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[people_vaccinated_x]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>people_vaccinated_x</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_fully_vaccinated</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[people_fully_vaccinated]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>people_fully_vaccinated</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>daily_vaccinations_raw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[daily_vaccinations_raw]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>daily_vaccinations_raw</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>daily_vaccinations</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[daily_vaccinations]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>daily_vaccinations</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_vaccinations_per_hundred</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_vaccinations_per_hundred]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>total_vaccinations_per_hundred</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_vaccinated_per_hundred</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[people_vaccinated_per_hundred]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>people_vaccinated_per_hundred</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_fully_vaccinated_per_hundred</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[people_fully_vaccinated_per_hundred]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>people_fully_vaccinated_per_hundred</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>daily_vaccinations_per_million</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[daily_vaccinations_per_million]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>daily_vaccinations_per_million</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Country]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>Country</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>112</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Status]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>Status</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>112</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Note</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Note]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>Note</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>112</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_vaccinations_y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_vaccinations_y]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>total_vaccinations_y</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_vaccinated_y</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[people_vaccinated_y]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>people_vaccinated_y</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_deaths</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_deaths]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>total_deaths</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_cases</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_cases]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>total_cases</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_cases</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[new_cases]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>new_cases</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_deaths</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[new_deaths]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>new_deaths</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>population_density</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[population_density]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>population_density</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gdp_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gdp_per_capita]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>gdp_per_capita</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>handwashing_facilities</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[handwashing_facilities]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>handwashing_facilities</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>diabetes_prevalence</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[diabetes_prevalence]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>diabetes_prevalence</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hospital_beds_per_thousand</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[hospital_beds_per_thousand]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>hospital_beds_per_thousand</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>life_expectancy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[life_expectancy]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>life_expectancy</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>human_development_index</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[human_development_index]</local-name>
+            <parent-name>[covid_map_data.csv]</parent-name>
+            <remote-alias>human_development_index</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <approx-count>112</approx-count>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>iso_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[iso_code (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>iso_code</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_vaccinations</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[total_vaccinations]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>total_vaccinations</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people_vaccinated</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[people_vaccinated]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>people_vaccinated</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_deaths</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_deaths (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>total_deaths</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_cases</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_cases (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>total_cases</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_cases</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[new_cases (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>new_cases</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>new_deaths</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[new_deaths (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>new_deaths</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>population_density</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[population_density (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>population_density</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gdp_per_capita</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gdp_per_capita (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>gdp_per_capita</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>handwashing_facilities</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[handwashing_facilities (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>handwashing_facilities</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>diabetes_prevalence</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[diabetes_prevalence (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>diabetes_prevalence</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hospital_beds_per_thousand</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[hospital_beds_per_thousand (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>hospital_beds_per_thousand</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>life_expectancy</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[life_expectancy (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>life_expectancy</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>human_development_index</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[human_development_index (covid_youth.csv)]</local-name>
+            <parent-name>[covid_youth.csv]</parent-name>
+            <remote-alias>human_development_index</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Range_HDI' datatype='string' name='[Calculation_731834958022623232]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [human_development_index]&gt;.85 THEN &apos;High HDI&apos; &#13;&#10;ELSE &apos;Low HDI&apos; &#13;&#10;END' />
+      </column>
+      <column caption='Options' datatype='boolean' name='[Calculation_92042338358013953]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='([Parameters].[Parameter 1]=&apos;New Cases&apos; and [Calculation_92042338364932106]= &apos;New Cases&apos;)&#13;&#10;or ([Parameters].[Parameter 1]=&apos;New Deaths&apos; and [Calculation_92042338370412557]=&apos;New Death&apos;)&#13;&#10;or ([Parameters].[Parameter 1]=&apos;Total Cases&apos; and [NewCases (copy)_92042338365104139] =&apos;Total Cases&apos;)&#13;&#10;or ([Parameters].[Parameter 1]=&apos;Human Development Index&apos; and [Calculation_92042338366074892]= &apos;Human Development Index&apos;)&#13;&#10;or ([Parameters].[Parameter 1]=&apos;Daily Vaccination&apos; and [Calculation_92042338364481545]=&apos;Vaccination&apos;)' />
+      </column>
+      <column caption='Vaccination' datatype='string' name='[Calculation_92042338364481545]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&apos;Vaccination&apos;' />
+      </column>
+      <column caption='NewCases' datatype='string' name='[Calculation_92042338364932106]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='//[Comparison 1]=&apos;New Cases&apos; &#13;&#10; //or [Comparison 1]=&apos;New Deaths&apos;&#13;&#10;//or [Comparison 1]=&apos;Total Cases&apos;&#13;&#10;//or [Comparison 1]=&apos;Human Development Index&apos;&#13;&#10;///or [Comparison 1]=&apos;Daily Vaccination&apos;&#13;&#10;&apos;New Cases&apos;' />
+      </column>
+      <column caption='School' datatype='string' name='[Calculation_92042338366074892]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='//[Comparison 1]=&apos;New Cases&apos; &#13;&#10; //or [Comparison 1]=&apos;New Deaths&apos;&#13;&#10;//or [Comparison 1]=&apos;Total Cases&apos;&#13;&#10;//or [Comparison 1]=&apos;Human Development Index&apos;&#13;&#10;//or [Comparison 1]=&apos;Daily Vaccination&apos;&#13;&#10;&apos;Human Development Index&apos;' />
+      </column>
+      <column caption='New Death' datatype='string' name='[Calculation_92042338370412557]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='&apos;New Deaths&apos;' />
+      </column>
+      <column caption='covariance_cases' datatype='real' name='[Calculation_92042338378309647]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COVAR([total_cases],[human_development_index])' />
+      </column>
+      <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <semantic-values semantic-role='[Geographical].[Latitude]'>
+          <semantic-value key='&quot;Turks and Caicos Island&quot;' value='21.804131999999999' />
+        </semantic-values>
+        <semantic-values semantic-role='[Geographical].[Longitude]'>
+          <semantic-value key='&quot;Turks and Caicos Island&quot;' value='-72.305831999999995' />
+        </semantic-values>
+      </column>
+      <column caption='Total Cases ' datatype='string' name='[NewCases (copy)_92042338365104139]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='//[Comparison 1]=&apos;New Cases&apos; &#13;&#10; //or [Comparison 1]=&apos;New Deaths&apos;&#13;&#10;//or [Comparison 1]=&apos;Total Cases&apos;&#13;&#10;//or [Comparison 1]=&apos;Human Development Index&apos;&#13;&#10;///or [Comparison 1]=&apos;Daily Vaccination&apos;&#13;&#10;&apos;Total Cases&apos;' />
+      </column>
+      <column datatype='string' name='[Note]' role='dimension' type='nominal' />
+      <column caption='Options 2' datatype='boolean' name='[Options (copy)_92042338358591490]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='([Parameters].[Comparison 1 (copy)_92042338357755904]=&apos;New Cases&apos; and [Calculation_92042338364932106]= &apos;New Cases&apos;)&#13;&#10;or ([Parameters].[Comparison 1 (copy)_92042338357755904]=&apos;New Deaths&apos; and [Calculation_92042338370412557]=&apos;New Death&apos;)&#13;&#10;or ([Parameters].[Comparison 1 (copy)_92042338357755904]=&apos;Total Cases&apos; and [NewCases (copy)_92042338365104139] =&apos;Total Cases&apos;)&#13;&#10;or ([Parameters].[Comparison 1 (copy)_92042338357755904]=&apos;Human Development Index&apos; and [Calculation_92042338366074892]= &apos;Human Developmemt Index&apos;)&#13;&#10;or ([Parameters].[Comparison 1 (copy)_92042338357755904]=&apos;Daily Vaccination&apos; and [Calculation_92042338364481545]=&apos;Vaccination&apos;)' />
+      </column>
+      <column datatype='string' name='[Status]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='covid_map_data.csv' datatype='table' name='[__tableau_internal_object_id__].[covid_map_data.csv_5B55F08C7F07450F94FFE08266E61FEF]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='covid_youth.csv' datatype='table' name='[__tableau_internal_object_id__].[covid_youth.csv_B44FE863152940B8BD72F4C93209D7C6]' role='measure' type='quantitative' />
+      <column caption='correlation_cases_vaccination' datatype='real' name='[correlation_cases  (copy)_92042338388926484]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='//CORR({ INCLUDE [Country],[Date]:sum([Total Cases])},{ INCLUDE [Country], [Date]: avg([Human Development Index])})&#13;&#10;CORR([new_cases],([daily_vaccinations]))' />
+      </column>
+      <column caption='correlation_death_vaccination' datatype='real' name='[correlation_cases_vaccination (copy)_92042338389561365]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='//CORR({ INCLUDE [Country],[Date]:sum([Total Cases])},{ INCLUDE [Country], [Date]: avg([Human Development Index])})&#13;&#10;CORR([new_deaths],([daily_vaccinations]))' />
+      </column>
+      <column caption='correlation_vaccination' datatype='real' name='[correlation_death (copy)_92042338381340691]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CORR([daily_vaccinations],[human_development_index])' />
+      </column>
+      <column caption='covariance_death' datatype='real' name='[covariance (copy)_92042338378481680]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COVAR([total_deaths],[human_development_index])' />
+      </column>
+      <column caption='correlation_cases ' datatype='real' name='[covariance_cases (copy)_92042338378719249]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='//CORR({ INCLUDE [Country],[Date]:sum([Total Cases])},{ INCLUDE [Country], [Date]: avg([Human Development Index])})&#13;&#10;CORR([total_cases],[human_development_index])' />
+      </column>
+      <column caption='correlation_death' datatype='real' name='[covariance_death (copy)_92042338378829842]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='CORR([total_deaths],[human_development_index])' />
+      </column>
+      <column caption='Daily Vaccinations' datatype='integer' name='[daily_vaccinations]' role='measure' type='quantitative' />
+      <column caption='Daily Vaccinations Per Million' datatype='real' name='[daily_vaccinations_per_million]' role='measure' type='quantitative' />
+      <column caption='Daily Vaccinations Raw' datatype='real' name='[daily_vaccinations_raw]' role='measure' type='quantitative' />
+      <column caption='Date (Covid Youth.Csv)' datatype='date' name='[date (covid_youth.csv)]' role='dimension' type='ordinal' />
+      <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Diabetes Prevalence (Covid Youth.Csv)' datatype='real' name='[diabetes_prevalence (covid_youth.csv)]' role='measure' type='quantitative' />
+      <column caption='Diabetes Prevalence' datatype='real' name='[diabetes_prevalence]' role='measure' type='quantitative' />
+      <column caption='Gdp Per Capita (Covid Youth.Csv)' datatype='real' name='[gdp_per_capita (covid_youth.csv)]' role='measure' type='quantitative' />
+      <column caption='Gdp Per Capita' datatype='real' name='[gdp_per_capita]' role='measure' type='quantitative' />
+      <column caption='Handwashing Facilities (Covid Youth.Csv)' datatype='real' name='[handwashing_facilities (covid_youth.csv)]' role='measure' type='quantitative' />
+      <column caption='Handwashing Facilities' datatype='real' name='[handwashing_facilities]' role='measure' type='quantitative' />
+      <column caption='Hospital Beds Per Thousand (Covid Youth.Csv)' datatype='real' name='[hospital_beds_per_thousand (covid_youth.csv)]' role='measure' type='quantitative' />
+      <column caption='Hospital Beds Per Thousand' datatype='real' name='[hospital_beds_per_thousand]' role='measure' type='quantitative' />
+      <column caption='Human Development Index (Covid Youth.Csv)' datatype='real' name='[human_development_index (covid_youth.csv)]' role='measure' type='quantitative' />
+      <column caption='Human Development Index' datatype='real' name='[human_development_index]' role='measure' type='quantitative' />
+      <column caption='Iso Code (Covid Youth.Csv)' datatype='string' name='[iso_code (covid_youth.csv)]' role='dimension' type='nominal' />
+      <column caption='Iso Code' datatype='string' name='[iso_code]' role='dimension' type='nominal' />
+      <column caption='Life Expectancy (Covid Youth.Csv)' datatype='real' name='[life_expectancy (covid_youth.csv)]' role='measure' type='quantitative' />
+      <column caption='Life Expectancy' datatype='real' name='[life_expectancy]' role='measure' type='quantitative' />
+      <column caption='Location' datatype='string' name='[location]' role='dimension' type='nominal' />
+      <column caption='New Cases (Covid Youth.Csv)' datatype='real' name='[new_cases (covid_youth.csv)]' role='measure' type='quantitative' />
+      <column caption='New Cases' datatype='real' name='[new_cases]' role='measure' type='quantitative' />
+      <column caption='New Deaths (Covid Youth.Csv)' datatype='real' name='[new_deaths (covid_youth.csv)]' role='measure' type='quantitative' />
+      <column caption='New Deaths' datatype='real' name='[new_deaths]' role='measure' type='quantitative' />
+      <column caption='People Fully Vaccinated' datatype='real' name='[people_fully_vaccinated]' role='measure' type='quantitative' />
+      <column caption='People Fully Vaccinated Per Hundred' datatype='real' name='[people_fully_vaccinated_per_hundred]' role='measure' type='quantitative' />
+      <column caption='People Vaccinated' datatype='string' name='[people_vaccinated]' role='dimension' type='nominal' />
+      <column caption='People Vaccinated Per Hundred' datatype='real' name='[people_vaccinated_per_hundred]' role='measure' type='quantitative' />
+      <column caption='People Vaccinated X' datatype='real' name='[people_vaccinated_x]' role='measure' type='quantitative' />
+      <column caption='People Vaccinated Y' datatype='real' name='[people_vaccinated_y]' role='measure' type='quantitative' />
+      <column caption='Population Density (Covid Youth.Csv)' datatype='real' name='[population_density (covid_youth.csv)]' role='measure' type='quantitative' />
+      <column caption='Population Density' datatype='real' name='[population_density]' role='measure' type='quantitative' />
+      <column caption='Total Cases (Covid Youth.Csv)' datatype='real' name='[total_cases (covid_youth.csv)]' role='measure' type='quantitative' />
+      <column caption='Total Cases' datatype='real' name='[total_cases]' role='measure' type='quantitative' />
+      <column caption='Total Deaths (Covid Youth.Csv)' datatype='real' name='[total_deaths (covid_youth.csv)]' role='measure' type='quantitative' />
+      <column caption='Total Deaths' datatype='real' name='[total_deaths]' role='measure' type='quantitative' />
+      <column caption='Total Vaccinations' datatype='string' name='[total_vaccinations]' role='dimension' type='nominal' />
+      <column caption='Total Vaccinations Per Hundred' datatype='real' name='[total_vaccinations_per_hundred]' role='measure' type='quantitative' />
+      <column caption='Total Vaccinations X' datatype='integer' name='[total_vaccinations_x]' role='measure' type='quantitative' />
+      <column caption='Total Vaccinations Y' datatype='real' name='[total_vaccinations_y]' role='measure' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Status]' derivation='None' name='[none:Status:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Status:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Partially open&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Fully open&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Closed due to COVID-19&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Academic break&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+      <datasource-dependencies datasource='Parameters'>
+        <column caption='Comparison 2' datatype='string' name='[Comparison 1 (copy)_92042338357755904]' param-domain-type='list' role='measure' type='nominal' value='&quot;New Deaths&quot;'>
+          <calculation class='tableau' formula='&quot;New Deaths&quot;' />
+        </column>
+        <column caption='Comparison 1' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Human Development Index&quot;'>
+          <calculation class='tableau' formula='&quot;Human Development Index&quot;' />
+        </column>
+      </datasource-dependencies>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='covid_map_data.csv' id='covid_map_data.csv_5B55F08C7F07450F94FFE08266E61FEF'>
+            <properties context=''>
+              <relation connection='textscan.112j9f90672uh418fcz6316mu2m7' name='covid_map_data.csv' table='[covid_map_data#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='location' ordinal='0' />
+                  <column datatype='string' name='iso_code' ordinal='1' />
+                  <column datatype='date' name='date' ordinal='2' />
+                  <column datatype='integer' name='total_vaccinations_x' ordinal='3' />
+                  <column datatype='real' name='people_vaccinated_x' ordinal='4' />
+                  <column datatype='real' name='people_fully_vaccinated' ordinal='5' />
+                  <column datatype='real' name='daily_vaccinations_raw' ordinal='6' />
+                  <column datatype='integer' name='daily_vaccinations' ordinal='7' />
+                  <column datatype='real' name='total_vaccinations_per_hundred' ordinal='8' />
+                  <column datatype='real' name='people_vaccinated_per_hundred' ordinal='9' />
+                  <column datatype='real' name='people_fully_vaccinated_per_hundred' ordinal='10' />
+                  <column datatype='real' name='daily_vaccinations_per_million' ordinal='11' />
+                  <column datatype='string' name='Country' ordinal='12' />
+                  <column datatype='string' name='Status' ordinal='13' />
+                  <column datatype='string' name='Note' ordinal='14' />
+                  <column datatype='real' name='total_vaccinations_y' ordinal='15' />
+                  <column datatype='real' name='people_vaccinated_y' ordinal='16' />
+                  <column datatype='real' name='total_deaths' ordinal='17' />
+                  <column datatype='real' name='total_cases' ordinal='18' />
+                  <column datatype='real' name='new_cases' ordinal='19' />
+                  <column datatype='real' name='new_deaths' ordinal='20' />
+                  <column datatype='real' name='population_density' ordinal='21' />
+                  <column datatype='real' name='gdp_per_capita' ordinal='22' />
+                  <column datatype='real' name='handwashing_facilities' ordinal='23' />
+                  <column datatype='real' name='diabetes_prevalence' ordinal='24' />
+                  <column datatype='real' name='hospital_beds_per_thousand' ordinal='25' />
+                  <column datatype='real' name='life_expectancy' ordinal='26' />
+                  <column datatype='real' name='human_development_index' ordinal='27' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='covid_youth.csv' id='covid_youth.csv_B44FE863152940B8BD72F4C93209D7C6'>
+            <properties context=''>
+              <relation connection='textscan.112j9f90672uh418fcz6316mu2m7' name='covid_youth.csv' table='[covid_youth#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='iso_code' ordinal='0' />
+                  <column datatype='date' name='date' ordinal='1' />
+                  <column datatype='string' name='total_vaccinations' ordinal='2' />
+                  <column datatype='string' name='people_vaccinated' ordinal='3' />
+                  <column datatype='real' name='total_deaths' ordinal='4' />
+                  <column datatype='real' name='total_cases' ordinal='5' />
+                  <column datatype='real' name='new_cases' ordinal='6' />
+                  <column datatype='real' name='new_deaths' ordinal='7' />
+                  <column datatype='real' name='population_density' ordinal='8' />
+                  <column datatype='real' name='gdp_per_capita' ordinal='9' />
+                  <column datatype='real' name='handwashing_facilities' ordinal='10' />
+                  <column datatype='real' name='diabetes_prevalence' ordinal='11' />
+                  <column datatype='real' name='hospital_beds_per_thousand' ordinal='12' />
+                  <column datatype='real' name='life_expectancy' ordinal='13' />
+                  <column datatype='real' name='human_development_index' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[iso_code]' />
+                <expression op='[iso_code (covid_youth.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[date]' />
+                <expression op='[date (covid_youth.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='covid_map_data.csv_5B55F08C7F07450F94FFE08266E61FEF' />
+            <second-end-point object-id='covid_youth.csv_B44FE863152940B8BD72F4C93209D7C6' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <shared-views>
+    <shared-view name='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r'>
+      <datasources>
+        <datasource caption='covid_map_data' name='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r'>
+        <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+        <column caption='Iso Code' datatype='string' name='[iso_code]' role='dimension' type='nominal' />
+        <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+        <column-instance column='[iso_code]' derivation='None' name='[none:iso_code:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <filter class='quantitative' column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:date:qk]' included-values='in-range'>
+        <min>#2020-12-13#</min>
+        <max>#2021-02-24#</max>
+      </filter>
+      <filter class='categorical' column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]'>
+        <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[none:iso_code:nk]' member='%null%' />
+          <groupfilter from='&quot;AIA&quot;' function='range' level='[none:iso_code:nk]' to='&quot;ZWE&quot;' />
+        </groupfilter>
+      </filter>
+    </shared-view>
+  </shared-views>
+  <worksheets>
+    <worksheet name='Forecasting_Vaccination'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_map_data' name='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r'>
+            <column caption='Daily Vaccinations' datatype='integer' name='[daily_vaccinations]' role='measure' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column-instance column='[daily_vaccinations]' derivation='Sum' forecast-column-base='[sum:daily_vaccinations:qk]' forecast-column-type='forecast-value' name='[fVal:sum:daily_vaccinations:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[new_cases]' derivation='Sum' forecast-column-base='[sum:new_cases:qk]' forecast-column-type='forecast-value' name='[fVal:sum:new_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[new_deaths]' derivation='Sum' forecast-column-base='[sum:new_deaths:qk]' forecast-column-type='forecast-value' name='[fVal:sum:new_deaths:qk]' pivot='key' type='quantitative' />
+            <column caption='Iso Code' datatype='string' name='[iso_code]' role='dimension' type='nominal' />
+            <column caption='New Cases' datatype='real' name='[new_cases]' role='measure' type='quantitative' />
+            <column caption='New Deaths' datatype='real' name='[new_deaths]' role='measure' type='quantitative' />
+            <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[iso_code]' derivation='None' name='[none:iso_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[daily_vaccinations]' derivation='Sum' name='[sum:daily_vaccinations:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[new_cases]' derivation='Sum' name='[sum:new_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[new_deaths]' derivation='Sum' name='[sum:new_deaths:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:date:qk]</column>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Forecast Indicator:nk]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[fVal:sum:daily_vaccinations:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Forecast Indicator:nk]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[fVal:sum:new_cases:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Forecast Indicator:nk]' />
+            </encodings>
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[fVal:sum:new_deaths:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Forecast Indicator:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[fVal:sum:new_cases:qk] + ([federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[fVal:sum:new_deaths:qk] + [federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[fVal:sum:daily_vaccinations:qk]))</rows>
+        <cols>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[tdy:date:qk]</cols>
+        <forecast-specification auto-forecast-agg='true' band-confidence-level='95.000000' enabled='true' fill-type='fill-missing' ignore-last='1' model-type='auto-season' range-type='auto' show-prediction-bands='true' />
+      </table>
+      <simple-id uuid='{8C220E90-AEBD-486A-BA97-EC26DD22AF03}' />
+    </worksheet>
+    <worksheet name='New Cases'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_map_data' name='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Turks and Caicos Island&quot;' value='21.804131999999999' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Turks and Caicos Island&quot;' value='-72.305831999999995' />
+              </semantic-values>
+            </column>
+            <column datatype='string' name='[Note]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Status]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Human Development Index' datatype='real' name='[human_development_index]' role='measure' type='quantitative' />
+            <column caption='Iso Code' datatype='string' name='[iso_code]' role='dimension' type='nominal' />
+            <column caption='New Cases' datatype='real' name='[new_cases]' role='measure' type='quantitative' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Note]' derivation='None' name='[none:Note:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Status]' derivation='None' name='[none:Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[iso_code]' derivation='None' name='[none:iso_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[new_cases]' derivation='Sum' name='[pcto:sum:new_cases:qk:3]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[human_development_index]' derivation='Sum' name='[sum:human_development_index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[new_cases]' derivation='Sum' name='[sum:new_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_cases]' derivation='Sum' name='[sum:total_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:ok]' pivot='key' type='ordinal' />
+            <column caption='Total Cases' datatype='real' name='[total_cases]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:date:qk]</column>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Longitude (generated)]' field-type='quantitative' max='21616728.15862358' min='-19126177.061058823' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Latitude (generated)]' field-type='quantitative' max='10777578.415542178' min='-13294376.140483804' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' value='240' />
+            <format attr='background-color' value='#e7f1f5' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' value='Status'>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>Status</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' />
+              <tooltip column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:human_development_index:qk]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[pcto:sum:new_cases:qk:3]' />
+              <tooltip column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:total_cases:qk]' />
+              <tooltip column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:new_cases:qk]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Note:nk]' />
+              <lod column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Country:nk]' />
+              <geometry column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Geometry (generated)]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run><![CDATA[<[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[pcto:sum:new_cases:qk:3]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Latitude (generated)]</rows>
+        <cols>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Longitude (generated)]</cols>
+        <pages>
+          <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[tdy:date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' />
+      </table>
+      <simple-id uuid='{0F54758A-89CE-44D2-AC60-52111A9FE0F6}' />
+    </worksheet>
+    <worksheet name='New Cases &amp; School Status'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_map_data' name='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r'>
+            <column caption='School' datatype='string' name='[Calculation_92042338366074892]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='//[Comparison 1]=&apos;New Cases&apos; &#13;&#10; //or [Comparison 1]=&apos;New Deaths&apos;&#13;&#10;//or [Comparison 1]=&apos;Total Cases&apos;&#13;&#10;//or [Comparison 1]=&apos;Human Development Index&apos;&#13;&#10;//or [Comparison 1]=&apos;Daily Vaccination&apos;&#13;&#10;&apos;Human Development Index&apos;' />
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Turks and Caicos Island&quot;' value='21.804131999999999' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Turks and Caicos Island&quot;' value='-72.305831999999995' />
+              </semantic-values>
+            </column>
+            <column datatype='string' name='[Note]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Status]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Human Development Index' datatype='real' name='[human_development_index]' role='measure' type='quantitative' />
+            <column caption='Iso Code' datatype='string' name='[iso_code]' role='dimension' type='nominal' />
+            <column caption='New Cases' datatype='real' name='[new_cases]' role='measure' type='quantitative' />
+            <column caption='New Deaths' datatype='real' name='[new_deaths]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_92042338366074892]' derivation='None' name='[none:Calculation_92042338366074892:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Note]' derivation='None' name='[none:Note:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Status]' derivation='None' name='[none:Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[iso_code]' derivation='None' name='[none:iso_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[new_cases]' derivation='Sum' name='[pcto:sum:new_cases:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[human_development_index]' derivation='Sum' name='[sum:human_development_index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[new_cases]' derivation='Sum' name='[sum:new_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[new_deaths]' derivation='Sum' name='[sum:new_deaths:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_cases]' derivation='Sum' name='[sum:total_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:ok]' pivot='key' type='ordinal' />
+            <column caption='Total Cases' datatype='real' name='[total_cases]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Calculation_92042338366074892:nk]'>
+            <groupfilter function='member' level='[none:Calculation_92042338366074892:nk]' member='&quot;Human Development Index&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:date:qk]</column>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Calculation_92042338366074892:nk]</column>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Longitude (generated)]' field-type='quantitative' max='21616728.15862358' min='-19126177.061058823' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Latitude (generated)]' field-type='quantitative' max='10777578.415542178' min='-13294376.140483804' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' value='240' />
+            <format attr='background-color' value='#e7f1f5' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' value='Status'>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>Status</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' />
+              <size column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:human_development_index:qk]' />
+              <tooltip column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:new_deaths:qk]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[pcto:sum:new_cases:qk:1]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:new_cases:qk]' />
+              <tooltip column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:total_cases:qk]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Note:nk]' />
+              <lod column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Country:nk]' />
+              <geometry column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Geometry (generated)]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:new_cases:qk]</run>
+                <run>&gt;&#10;&lt;</run>
+                <run>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[pcto:sum:new_cases:qk:1]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Latitude (generated)]</rows>
+        <cols>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Longitude (generated)]</cols>
+        <pages>
+          <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[tdy:date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' />
+      </table>
+      <simple-id uuid='{DCF31CEB-612F-4E7A-B651-5E3F3281786E}' />
+    </worksheet>
+    <worksheet name='New Deaths and School Status'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_map_data' name='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Turks and Caicos Island&quot;' value='21.804131999999999' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Turks and Caicos Island&quot;' value='-72.305831999999995' />
+              </semantic-values>
+            </column>
+            <column datatype='string' name='[Note]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Status]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Human Development Index' datatype='real' name='[human_development_index]' role='measure' type='quantitative' />
+            <column caption='Iso Code' datatype='string' name='[iso_code]' role='dimension' type='nominal' />
+            <column caption='New Cases' datatype='real' name='[new_cases]' role='measure' type='quantitative' />
+            <column caption='New Deaths' datatype='real' name='[new_deaths]' role='measure' type='quantitative' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Note]' derivation='None' name='[none:Note:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Status]' derivation='None' name='[none:Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[iso_code]' derivation='None' name='[none:iso_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[new_deaths]' derivation='Sum' name='[pcto:sum:new_deaths:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[human_development_index]' derivation='Sum' name='[sum:human_development_index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[new_cases]' derivation='Sum' name='[sum:new_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[new_deaths]' derivation='Sum' name='[sum:new_deaths:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <slices>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:date:qk]</column>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Longitude (generated)]' field-type='quantitative' max='21616728.15862358' min='-19126177.061058823' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Latitude (generated)]' field-type='quantitative' max='10777578.415542178' min='-13294376.140483804' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' value='240' />
+            <format attr='background-color' value='#e7f1f5' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' value='Status'>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>Status</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' />
+              <tooltip column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:human_development_index:qk]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[pcto:sum:new_deaths:qk:1]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:new_cases:qk]' />
+              <tooltip column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:new_deaths:qk]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Note:nk]' />
+              <lod column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Country:nk]' />
+              <geometry column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Geometry (generated)]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run>&lt;</run>
+                <run>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[pcto:sum:new_deaths:qk:1]</run>
+                <run>&gt;&#10;&lt;</run>
+                <run>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:new_cases:qk]</run>
+                <run>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Latitude (generated)]</rows>
+        <cols>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Longitude (generated)]</cols>
+        <pages>
+          <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[tdy:date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' />
+      </table>
+      <simple-id uuid='{A148CC82-BC21-4A1F-A713-74AD944758E2}' />
+    </worksheet>
+    <worksheet name='Total Cases'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_map_data' name='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r'>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Turks and Caicos Island&quot;' value='21.804131999999999' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Turks and Caicos Island&quot;' value='-72.305831999999995' />
+              </semantic-values>
+            </column>
+            <column caption='Total Cases ' datatype='string' name='[NewCases (copy)_92042338365104139]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='//[Comparison 1]=&apos;New Cases&apos; &#13;&#10; //or [Comparison 1]=&apos;New Deaths&apos;&#13;&#10;//or [Comparison 1]=&apos;Total Cases&apos;&#13;&#10;//or [Comparison 1]=&apos;Human Development Index&apos;&#13;&#10;///or [Comparison 1]=&apos;Daily Vaccination&apos;&#13;&#10;&apos;Total Cases&apos;' />
+            </column>
+            <column datatype='string' name='[Note]' role='dimension' type='nominal' />
+            <column datatype='string' name='[Status]' role='dimension' type='nominal' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Human Development Index' datatype='real' name='[human_development_index]' role='measure' type='quantitative' />
+            <column caption='Iso Code' datatype='string' name='[iso_code]' role='dimension' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[NewCases (copy)_92042338365104139]' derivation='None' name='[none:NewCases (copy)_92042338365104139:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Note]' derivation='None' name='[none:Note:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Status]' derivation='None' name='[none:Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[iso_code]' derivation='None' name='[none:iso_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[total_cases]' derivation='Sum' name='[pcto:sum:total_cases:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[human_development_index]' derivation='Sum' name='[sum:human_development_index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_cases]' derivation='Sum' name='[sum:total_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:ok]' pivot='key' type='ordinal' />
+            <column caption='Total Cases' datatype='real' name='[total_cases]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:NewCases (copy)_92042338365104139:nk]'>
+            <groupfilter function='member' level='[none:NewCases (copy)_92042338365104139:nk]' member='&quot;Total Cases&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:date:qk]</column>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:NewCases (copy)_92042338365104139:nk]</column>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Longitude (generated)]' field-type='quantitative' max='21616728.15862358' min='-19126177.061058823' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Latitude (generated)]' field-type='quantitative' max='10777578.415542178' min='-13294376.140483804' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:NewCases (copy)_92042338365104139:nk]' value='false' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' value='240' />
+            <format attr='background-color' value='#e7f1f5' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' value='Status'>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>Status</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' />
+              <tooltip column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:human_development_index:qk]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[pcto:sum:total_cases:qk:1]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:total_cases:qk]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Note:nk]' />
+              <lod column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Country:nk]' />
+              <geometry column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Geometry (generated)]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run><![CDATA[<[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[pcto:sum:total_cases:qk:1]>]]></run>
+                <run>Æ&#10;</run>
+                <run><![CDATA[<[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:total_cases:qk]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:NewCases (copy)_92042338365104139:nk] * [federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Latitude (generated)])</rows>
+        <cols>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Longitude (generated)]</cols>
+        <pages>
+          <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[tdy:date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' />
+      </table>
+      <simple-id uuid='{7265EFC6-B299-451C-B531-4B43FD331D60}' />
+    </worksheet>
+    <worksheet name='Vacccination'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='covid_map_data' name='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r' />
+            <datasource name='Parameters' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Comparison 2' datatype='string' name='[Comparison 1 (copy)_92042338357755904]' param-domain-type='list' role='measure' type='nominal' value='&quot;New Deaths&quot;'>
+              <calculation class='tableau' formula='&quot;New Deaths&quot;' />
+            </column>
+            <column caption='Comparison 1' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;Human Development Index&quot;'>
+              <calculation class='tableau' formula='&quot;Human Development Index&quot;' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r'>
+            <column caption='Options' datatype='boolean' name='[Calculation_92042338358013953]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='([Parameters].[Parameter 1]=&apos;New Cases&apos; and [Calculation_92042338364932106]= &apos;New Cases&apos;)&#13;&#10;or ([Parameters].[Parameter 1]=&apos;New Deaths&apos; and [Calculation_92042338370412557]=&apos;New Death&apos;)&#13;&#10;or ([Parameters].[Parameter 1]=&apos;Total Cases&apos; and [NewCases (copy)_92042338365104139] =&apos;Total Cases&apos;)&#13;&#10;or ([Parameters].[Parameter 1]=&apos;Human Development Index&apos; and [Calculation_92042338366074892]= &apos;Human Development Index&apos;)&#13;&#10;or ([Parameters].[Parameter 1]=&apos;Daily Vaccination&apos; and [Calculation_92042338364481545]=&apos;Vaccination&apos;)' />
+            </column>
+            <column caption='Vaccination' datatype='string' name='[Calculation_92042338364481545]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&apos;Vaccination&apos;' />
+            </column>
+            <column caption='NewCases' datatype='string' name='[Calculation_92042338364932106]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='//[Comparison 1]=&apos;New Cases&apos; &#13;&#10; //or [Comparison 1]=&apos;New Deaths&apos;&#13;&#10;//or [Comparison 1]=&apos;Total Cases&apos;&#13;&#10;//or [Comparison 1]=&apos;Human Development Index&apos;&#13;&#10;///or [Comparison 1]=&apos;Daily Vaccination&apos;&#13;&#10;&apos;New Cases&apos;' />
+            </column>
+            <column caption='School' datatype='string' name='[Calculation_92042338366074892]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='//[Comparison 1]=&apos;New Cases&apos; &#13;&#10; //or [Comparison 1]=&apos;New Deaths&apos;&#13;&#10;//or [Comparison 1]=&apos;Total Cases&apos;&#13;&#10;//or [Comparison 1]=&apos;Human Development Index&apos;&#13;&#10;//or [Comparison 1]=&apos;Daily Vaccination&apos;&#13;&#10;&apos;Human Development Index&apos;' />
+            </column>
+            <column caption='New Death' datatype='string' name='[Calculation_92042338370412557]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='&apos;New Deaths&apos;' />
+            </column>
+            <column datatype='string' name='[Country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Turks and Caicos Island&quot;' value='21.804131999999999' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Turks and Caicos Island&quot;' value='-72.305831999999995' />
+              </semantic-values>
+            </column>
+            <column caption='Total Cases ' datatype='string' name='[NewCases (copy)_92042338365104139]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='//[Comparison 1]=&apos;New Cases&apos; &#13;&#10; //or [Comparison 1]=&apos;New Deaths&apos;&#13;&#10;//or [Comparison 1]=&apos;Total Cases&apos;&#13;&#10;//or [Comparison 1]=&apos;Human Development Index&apos;&#13;&#10;///or [Comparison 1]=&apos;Daily Vaccination&apos;&#13;&#10;&apos;Total Cases&apos;' />
+            </column>
+            <column datatype='string' name='[Note]' role='dimension' type='nominal' />
+            <column caption='Options 2' datatype='boolean' name='[Options (copy)_92042338358591490]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='([Parameters].[Comparison 1 (copy)_92042338357755904]=&apos;New Cases&apos; and [Calculation_92042338364932106]= &apos;New Cases&apos;)&#13;&#10;or ([Parameters].[Comparison 1 (copy)_92042338357755904]=&apos;New Deaths&apos; and [Calculation_92042338370412557]=&apos;New Death&apos;)&#13;&#10;or ([Parameters].[Comparison 1 (copy)_92042338357755904]=&apos;Total Cases&apos; and [NewCases (copy)_92042338365104139] =&apos;Total Cases&apos;)&#13;&#10;or ([Parameters].[Comparison 1 (copy)_92042338357755904]=&apos;Human Development Index&apos; and [Calculation_92042338366074892]= &apos;Human Developmemt Index&apos;)&#13;&#10;or ([Parameters].[Comparison 1 (copy)_92042338357755904]=&apos;Daily Vaccination&apos; and [Calculation_92042338364481545]=&apos;Vaccination&apos;)' />
+            </column>
+            <column datatype='string' name='[Status]' role='dimension' type='nominal' />
+            <column caption='Daily Vaccinations' datatype='integer' name='[daily_vaccinations]' role='measure' type='quantitative' />
+            <column caption='Date' datatype='date' name='[date]' role='dimension' type='ordinal' />
+            <column caption='Human Development Index' datatype='real' name='[human_development_index]' role='measure' type='quantitative' />
+            <column caption='Iso Code' datatype='string' name='[iso_code]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_92042338358013953]' derivation='None' name='[none:Calculation_92042338358013953:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_92042338364481545]' derivation='None' name='[none:Calculation_92042338364481545:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country]' derivation='None' name='[none:Country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Note]' derivation='None' name='[none:Note:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Options (copy)_92042338358591490]' derivation='None' name='[none:Options (copy)_92042338358591490:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Status]' derivation='None' name='[none:Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[date]' derivation='None' name='[none:date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[iso_code]' derivation='None' name='[none:iso_code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[daily_vaccinations]' derivation='Sum' name='[pcto:sum:daily_vaccinations:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Rows' type='PctTotal' />
+            </column-instance>
+            <column-instance column='[human_development_index]' derivation='Sum' name='[sum:human_development_index:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_cases]' derivation='Sum' name='[sum:total_cases:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[date]' derivation='Day-Trunc' name='[tdy:date:ok]' pivot='key' type='ordinal' />
+            <column caption='Total Cases' datatype='real' name='[total_cases]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Calculation_92042338358013953:nk]'>
+            <groupfilter function='member' level='[none:Calculation_92042338358013953:nk]' member='true' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Calculation_92042338364481545:nk]'>
+            <groupfilter function='member' level='[none:Calculation_92042338364481545:nk]' member='&quot;Vaccination&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Options (copy)_92042338358591490:nk]'>
+            <groupfilter function='member' level='[none:Options (copy)_92042338358591490:nk]' member='false' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:date:qk]</column>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Calculation_92042338364481545:nk]</column>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Calculation_92042338358013953:nk]</column>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Options (copy)_92042338358591490:nk]</column>
+            <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Longitude (generated)]' field-type='quantitative' max='53916843.089438885' min='29537954.666034911' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Latitude (generated)]' field-type='quantitative' max='6713697.7112094462' min='-15636635.239558645' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Options (copy)_92042338358591490:nk]' value='false' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' value='240' />
+            <format attr='background-color' value='#e7f1f5' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' value='Status'>
+              <formatted-text>
+                <run bold='true' fontalignment='1'>Status</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Multipolygon' />
+            <encodings>
+              <color column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' />
+              <tooltip column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:human_development_index:qk]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[pcto:sum:daily_vaccinations:qk:1]' />
+              <tooltip column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[sum:total_cases:qk]' />
+              <text column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Note:nk]' />
+              <lod column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Country:nk]' />
+              <geometry column='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Geometry (generated)]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run><![CDATA[<[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[pcto:sum:daily_vaccinations:qk:1]>]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Options (copy)_92042338358591490:nk] * [federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Latitude (generated)])</rows>
+        <cols>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Longitude (generated)]</cols>
+        <pages>
+          <column>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[tdy:date:ok]</column>
+        </pages>
+        <page-trail-options enabled='true' />
+      </table>
+      <simple-id uuid='{5FB527A9-1C90-450A-9257-3B74F9866952}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Story' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>COVID-19 World Data for Select Countries</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size maxheight='964' maxwidth='1016' minheight='964' minwidth='1016' />
+      <zones>
+        <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98340' id='1' param='vert' removable='false' w='98426' x='787' y='830'>
+            <zone _.fcp.SetMembershipControl.false...type='title' _.fcp.SetMembershipControl.true...type-v2='title' h='5187' id='3' w='98426' x='787' y='830' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard-nav' _.fcp.SetMembershipControl.true...type-v2='flipboard-nav' h='10477' id='4' is-fixed='true' paired-zone-id='5' removable='false' w='98426' x='787' y='6017' />
+            <zone _.fcp.SetMembershipControl.false...type='flipboard' _.fcp.SetMembershipControl.true...type-v2='flipboard' h='82676' id='5' paired-zone-id='4' removable='false' w='98426' x='787' y='16494'>
+              <flipboard active-id='6' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='New Cases &amp; School Status' captured-sheet='New Cases &amp; School Status' id='1'>
+                    <capturedDeltas>
+                      <worksheet name='New Cases &amp; School Status'>
+                        <current-page>
+                          <multibucket>
+                            <bucket>#2020-12-27 00:00:00#</bucket>
+                          </multibucket>
+                        </current-page>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='New Deaths &amp; School Status' captured-sheet='New Deaths and School Status' id='2'>
+                    <capturedDeltas>
+                      <worksheet name='New Deaths and School Status'>
+                        <current-page>
+                          <multibucket>
+                            <bucket>#2021-01-13 00:00:00#</bucket>
+                          </multibucket>
+                        </current-page>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='New Cases' captured-sheet='New Cases' id='3' />
+                  <story-point caption='Total Cases' captured-sheet='Total Cases' id='4' />
+                  <story-point caption='Vaccination' captured-sheet='Vacccination' id='5'>
+                    <capturedDeltas>
+                      <worksheet name='Vacccination'>
+                        <style delta-type='added'>
+                          <style-rule element='axis'>
+                            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Latitude (generated)]' field-type='quantitative' max='18643674.376289885' min='-27566611.904639084' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+                            <encoding attr='space' class='0' field='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[Longitude (generated)]' field-type='quantitative' max='66106287.301140875' min='17348510.454332925' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+                          </style-rule>
+                        </style>
+                      </worksheet>
+                    </capturedDeltas>
+                  </story-point>
+                  <story-point caption='Forecasting with Tableau' captured-sheet='Forecasting_Vaccination' id='6' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <simple-id uuid='{C20E8DD7-B918-473E-81A6-948E79A342AE}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='dashboard' maximized='true' name='Story'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{3D74FB3D-D449-4B2E-9E92-66F7DB5309DF}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Forecasting_Vaccination'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]' show-apply='true' type='filter' />
+            <card param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='2' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Forecast Indicator:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Forecast Indicator:nk]</field>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]</field>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[yr:date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{11E647E2-F9F2-4160-97D6-1CE8760F3765}' />
+    </window>
+    <window class='worksheet' hidden='true' name='New Cases'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]' show-apply='true' type='filter' />
+            <card type='currpage' />
+            <card pane-specification-id='0' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2021-01-24 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Note:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0B33C6A5-5B91-4A48-AAF9-3E75284F842A}' />
+    </window>
+    <window class='worksheet' hidden='true' name='New Cases &amp; School Status'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]' show-apply='true' type='filter' />
+            <card type='currpage' />
+            <card pane-specification-id='0' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2021-01-24 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Calculation_92042338358013953:nk]</field>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Calculation_92042338366074892:nk]</field>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Note:nk]</field>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Options (copy)_92042338358591490:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{21DFC220-15DC-4D73-8543-85CFE8F21292}' />
+    </window>
+    <window class='worksheet' hidden='true' name='New Deaths and School Status'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]' show-apply='true' type='filter' />
+            <card type='currpage' />
+            <card pane-specification-id='0' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2021-01-24 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Note:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{48EF66F0-71D3-4C91-A282-27AD7EECB217}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Total Cases'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]' show-apply='true' type='filter' />
+            <card type='currpage' />
+            <card pane-specification-id='0' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2021-01-18 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Calculation_92042338358013953:nk]</field>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:NewCases (copy)_92042338365104139:nk]</field>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Note:nk]</field>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Options (copy)_92042338358591490:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D09582BC-A449-4BB8-8D78-2CEEE083DE34}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Vacccination'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:iso_code:nk]' type='filter' />
+            <card type='currpage' />
+            <card pane-specification-id='0' param='[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <current-page>
+          <multibucket>
+            <bucket>#2021-01-24 00:00:00#</bucket>
+          </multibucket>
+        </current-page>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Calculation_92042338358013953:nk]</field>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Calculation_92042338364481545:nk]</field>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Note:nk]</field>
+            <field>[federated.1i4v23p1j3l9wp1bqgs1m1u7ch2r].[none:Options (copy)_92042338358591490:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{61453AD2-671C-45B3-A649-E4625D59EEB7}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Story' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
