@@ -7,7 +7,7 @@ In this team project, we will analyze the data on COVID-19 for 2020 to predict t
     - When more tests  are performed, we find more positive cases
 2.	Find out the correlation between # of COVID-19 positive cases and # of death. 
 	  - More positive cases does not lead to more death
-3.	Find out the correlation between # of vaccinations and Human Development Index.
+3.	Find out the correlation between # of vaccinations and Human Development Index. Also looking at how the Human Development Index affects total COVID cases
 	  - The higher the Human Development Index, the higher the amount of Vaccinations countries receive.
 4.	Find out how the Human Devlopment Index effects the vaccination rollout across different countries that we are using for analysis. 
 	  - Vaccine rollout is effected by the Human Development Index, and other socioeconomic factors such as politcs. 
