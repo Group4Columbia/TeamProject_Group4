@@ -4,9 +4,9 @@
 ### TOPIC: COVID 19 Machine Learning Analysis
 In this team project, we analyzed COVID-19 data for 2020 to predict its impact on outcomes in 2021. We analyzed current trends of COVID-19 dataset using numerous statistical calculations and python packages to displays trends and forecast/predict outcome based on collected data. 
 1.  Find out the correlation between # of test and the COVID-19 positive cases. 
-   - When more tests  are performed, we find more positive cases
+    - When more tests  are performed, we find more positive cases
 2.  Find out the correlation between # of COVID-19 positive cases and # of death. 
-   - More positive cases does not lead to more death
+    - More positive cases does not lead to more death
 3.  Find out the correlation between # of vaccinations and Human Development Index. Also looking at how the Human Development Index affects total COVID cases
     - The higher the Human Development Index, the higher the amount of Vaccinations countries receive.
 4.  Find out how the Human Devlopment Index effects the vaccination rollout across different countries that we are using for analysis. 
