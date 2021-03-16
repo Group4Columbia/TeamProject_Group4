@@ -45,7 +45,7 @@ In this team project, we analyzed COVID-19 data for 2020 to predict its impact o
 
 ### Conclusion
 1. 	Both World and US Map - COVID-19 Map - Johns Hopkins Coronavirus Resource Center  - John Hopkins Data – on the Map
-2.	Trend Analysis –Python technology
+2.	Trend Analysis –Python technology, R 
 3.	Prediction Analysis: Machine Learning (Neural Networks and Deep Learning Models) - [Machine Learning School Closing & Covid 19 Cases](https://github.com/Group4Columbia/TeamProject_Group4/blob/main/School_Closure_Covid19_Human.ipynb)
 4.	Final Report provide visual using Tableau 
 
