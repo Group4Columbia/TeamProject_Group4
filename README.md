@@ -11,7 +11,7 @@ In this team project, we analyzed COVID-19 data for 2020 to predict its impact o
     - The higher the Human Development Index, the higher the amount of Vaccinations countries receive.
 4.  Find out how the Human Devlopment Index effects the vaccination rollout across different countries that we are using for analysis. 
     - Vaccine rollout is effected by the Human Development Index, and other socioeconomic factors such as politics. 
-    - [Dashboard] (https://public.tableau.com/profile/jodi.ann.osborne#!/vizhome/COVID_Group_improved/Story?publish=yes)
+    - [Dashboard](https://public.tableau.com/profile/jodi.ann.osborne#!/vizhome/COVID_Group_improved/Story?publish=yes)
 5.  Find out the relationship between days of school closures and cases in the country / region.
     - School closures does not decrease community cases - [Machine Learning School Closing & Covid 19 Cases](https://github.com/Group4Columbia/TeamProject_Group4/blob/main/School_Closure_Covid19_Human.ipynb)
 
