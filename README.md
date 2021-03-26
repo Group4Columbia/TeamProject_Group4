@@ -44,6 +44,6 @@ In this team project, we analyzed COVID-19 data for 2020 to predict its impact o
 3.	Prediction Analysis: Machine Learning (Neural Networks and Deep Learning Models) 
 4.	Final Report using Tableau to provide summary of visualizations 
 
-
-
+### Pre-recorded Pesentation
+[Slides]((https://github.com/Group4Columbia/TeamProject_Group4/blob/main/Project%20Resources/final_presentation/Presentation-automatic.ppsx)
 
