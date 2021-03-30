@@ -2,23 +2,18 @@
 
 
 ### TOPIC: COVID 19 Machine Learning Analysis
-In this team project, we will analyze the data on COVID-19 for 2020 to predict the COVID-19 impact in 2021 and analyze current trends of COVID-19 dataset using machine learning tactics. 
-1.	Find out the correlation between # of test and the COVID-19 positive cases. 
-    - More testing does not lead to more cases
-2.	Find out the correlation between # of COVID-19 positive cases and # of death 
-	  - More positive cases does not lead to more death
-3.	Find out the correlation between # of vaccination and # of cases by county / state 
-	  - More vaccination does not lead to less cases
-4.	Find out if the most populated areas have the greatest amount of vaccinations  
-	  - Vaccine rollout is not related to population
-5.  Find out the relationship between days of school closures and cases in the community 
-    - School closures does not decrease community cases
-
-### Team project Environment Setup
-- Team Github – https://github.com/Group4Columbia/TeamProject_Group4
-- Main 
-- Branch (per each) 
-- ![team members brach setup](https://github.com/Group4Columbia/TeamProject_Group4/blob/main/Capture_branch.JPG)
+In this team project, we analyzed COVID-19 data for 2020 to predict its impact on outcomes in 2021. We analyzed current trends of COVID-19 dataset using numerous statistical calculations and python packages to displays trends and forecast/predict outcome based on collected data. 
+1.  Find out the correlation between # of test and the COVID-19 positive cases. 
+    - When more tests  are performed, we find more positive cases
+2.  Find out the correlation between # of COVID-19 positive cases and # of death. 
+    - More positive cases does lead to more death
+3.  Find out the correlation between # of vaccinations and Human Development Index. Also looking at how the Human Development Index affects total COVID cases
+    - The higher the Human Development Index, the higher the amount of Vaccinations countries receive.
+4.  Find out how the Human Devlopment Index effects the vaccination rollout across different countries that we are using for analysis. 
+    - Vaccine rollout is effected by the Human Development Index, and other socioeconomic factors such as politics. 
+    - [Dashboard](https://public.tableau.com/profile/jodi.ann.osborne#!/vizhome/COVID_Group_improved/Story?publish=yes)
+5.  Find out the relationship between days of school closures and cases in the country / region.
+    - School closures does not decrease community cases - [Machine Learning School Closing & Covid 19 Cases](https://github.com/Group4Columbia/TeamProject_Group4/blob/main/School_Closure_Covid19_Human.ipynb)
 
 ### Objectives
 1.	Team members present a provisional machine learning model that stands in for the final machine learning model and accomplishes the following: 
@@ -41,10 +36,14 @@ In this team project, we will analyze the data on COVID-19 for 2020 to predict t
 4.	https://www.theguardian.com/us-news/2021/feb/18/us-vaccine-distribution-tracker-by-state
 5.	https://data.humdata.org/event/
 6.	https://covid.cdc.gov/covid-data-tracker/#vaccination-demographic
+7.	https://github.com/owid/covid-19-data/blob/master/public/data/owid-covid-codebook.csv
 
 ### Team Project Development Planning: 
-1.	Both World and US Map - COVID-19 Map - Johns Hopkins Coronavirus Resource Center  - John Hopkins Data – on the Map
-2.	Trend Analysis –Python technology
+1.	World Map displying trends
+2.	Trend Analysis – Python technology
 3.	Prediction Analysis: Machine Learning (Neural Networks and Deep Learning Models) 
-4.	Final Report provide visual using Tableau 
+4.	Final Report using Tableau to provide summary of visualizations 
+
+### Pre-recorded Pesentation
+[Slides](https://github.com/Group4Columbia/TeamProject_Group4/blob/main/Project%20Resources/final_presentation/Presentation-automatic.ppsx)
 
